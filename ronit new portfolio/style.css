@@ -3018,3 +3018,43 @@ body.cyber-dark {
     flex-wrap: wrap;
   }
 }
+
+/* Animated wavy distortion for profile picture */
+.cyber-portrait-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  animation: profileWave 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px #00e5ff);
+  will-change: border-radius, transform;
+}
+
+@keyframes profileWave {
+  0%, 100% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    transform: scale(1) rotate(0deg);
+  }
+
+  25% {
+    border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%;
+    transform: scale(1.03) rotate(2deg);
+  }
+
+  50% {
+    border-radius: 40% 60% 45% 55% / 55% 45% 60% 40%;
+    transform: scale(0.98) rotate(0deg);
+  }
+
+  75% {
+    border-radius: 55% 45% 40% 60% / 60% 40% 55% 45%;
+    transform: scale(1.03) rotate(-2deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cyber-portrait-img {
+    animation: none;
+  }
+}
