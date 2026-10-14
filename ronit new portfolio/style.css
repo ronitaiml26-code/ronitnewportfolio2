@@ -3096,3 +3096,48 @@ body.cyber-dark {
 .cyber-portrait-img:hover {
   transform: none;
 }
+
+/* SQUARE PROFILE PHOTO WITH WAVY MORPHING */
+.cyber-portrait-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  object-fit: cover;
+
+  /* Keep square corners */
+  border-radius: 0 !important;
+
+  /* Animated wave movement */
+  animation: squareWave 3s ease-in-out infinite !important;
+  transform-origin: center;
+  will-change: transform, filter;
+}
+
+@keyframes squareWave {
+  0%, 100% {
+    transform: scale(1) skewX(0deg);
+    filter: drop-shadow(0 0 5px #00e5ff);
+  }
+
+  25% {
+    transform: scale(1.025) skewX(1.5deg);
+    filter: drop-shadow(0 0 12px #00e5ff);
+  }
+
+  50% {
+    transform: scale(0.985) skewX(-1.5deg);
+    filter: drop-shadow(0 0 8px #ffe500);
+  }
+
+  75% {
+    transform: scale(1.02) skewX(1deg);
+    filter: drop-shadow(0 0 12px #00e5ff);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cyber-portrait-img {
+    animation: none !important;
+  }
+}
