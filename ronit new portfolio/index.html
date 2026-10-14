@@ -1330,6 +1330,26 @@
   <!-- JavaScript Modules -->
   <script src="script.js"></script>
 </body>
-  <script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
+ <script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
 <script src="https://files.bpcontent.cloud/2026/10/14/19/20261014193946-9H3204TE.js" defer></script>
+  
+<script>
+  window.botpress = window.botpress || {};
+
+  window.addEventListener("load", function () {
+    if (window.botpress.on && window.botpress.config) {
+      window.botpress.on("webchat:initialized", function () {
+        window.botpress.config({
+          configuration: {
+            themeMode: "dark",
+            themeColor: "#168BFF",
+            fontFamily: "inter",
+            radius: 16
+          }
+        });
+      });
+    }
+  });
+</script>
+
 </html>
