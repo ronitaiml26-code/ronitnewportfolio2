@@ -18,6 +18,15 @@
   --neon-blue-glow: rgba(0, 240, 255, 0.45);
   --neon-blue-dim: rgba(0, 240, 255, 0.12);
 
+  .cyber-portrait-img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
   /* Secondary Accent: Neon Yellow */
   --neon-yellow: #ffe600;
   --neon-yellow-light: #fff26a;
