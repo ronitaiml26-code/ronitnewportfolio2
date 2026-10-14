@@ -3058,3 +3058,41 @@ body.cyber-dark {
     animation: none;
   }
 }
+
+/* PROFILE PHOTO: SQUARE SHAPE + CLEAN FRAME */
+
+/* Make the photo perfectly square */
+.cyber-portrait-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 !important;
+  display: block;
+  transform: none;
+  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.25));
+  animation: none;
+}
+
+/* Remove decorative corner lines */
+.portrait-corner {
+  display: none !important;
+}
+
+/* Remove extra borders around the image */
+.portrait-img-wrapper {
+  border: none !important;
+  border-radius: 0 !important;
+  overflow: hidden;
+}
+
+/* Keep the outer portrait area clean */
+.cyber-portrait-frame {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Disable any old wave animation */
+.cyber-portrait-img:hover {
+  transform: none;
+}
