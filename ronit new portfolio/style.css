@@ -3109,7 +3109,7 @@ body.cyber-dark {
   border-radius: 0 !important;
 
   /* Animated wave movement */
-  animation: squareWave 3s ease-in-out infinite !important;
+  animation: squareWave 8s ease-in-out infinite !important;
   transform-origin: center;
   will-change: transform, filter;
 }
